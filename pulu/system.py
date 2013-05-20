@@ -60,16 +60,6 @@ def create_task(title, text):
     run_build()
 
 
-def login(user, password):
-    '''
-    Tests user login details.
-
-    :arg user: username
-    :arg password: password
-
-    :return: Boolean value based on if the login is correct or not
-    '''
-    return True
 
 
 def run_build():
@@ -82,18 +72,5 @@ def run_build():
     out, err = system(build_command)
     return out
 
-
-def update_post(user, password, title, text):
-    '''
-    Updates a given post by a user.
-
-    :arg user: Username
-    :arg password: Password for the user
-    :arg title: Title of the post
-    :arg text: Text of the post.
-    '''
-    #First check the credentials
-    if not login(user, password):
-        return
 
 

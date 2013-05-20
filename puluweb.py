@@ -11,17 +11,19 @@ def hello_world():
     return 'Hello World!'
 
 
-
 @app.route('/updatehook/', methods=['POST'])
 def updatehook():
+    """
+    Should be called after github hook calls our app.
+
+    :return: String "done"
+    """
     rf = request.form
     if request.method == 'POST':
         if 'payload' in rf:
             update(rf['payload'])
 
     return "done"
-
-
 
 
 if __name__ == '__main__':

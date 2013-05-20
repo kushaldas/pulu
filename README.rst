@@ -11,7 +11,7 @@ solution.txt
 Written explanation of the solution. Any program should be listed using
 ::
     
-    .. listing:: filename.py python'
+    .. listing:: github_username/assignment_name/filename.py python
 
 style.
 
