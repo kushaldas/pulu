@@ -67,7 +67,7 @@ def blog_post(user, name, path, commits):
 
         text = text + '\n' + get_commits_text(commits)
 
-        create_task(title, text)
+        create_task(title, text, tags=[user,])
         print "blog posted for", user, name
 
 

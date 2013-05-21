@@ -18,7 +18,7 @@ def write_post(path, texts):
     fobj.close()
 
 
-def create_task(title, text):
+def create_task(title, text, tags=[]):
     '''
     Creares a new home task with the given
     text.
@@ -49,6 +49,8 @@ def create_task(title, text):
     for line in lines:
         if line.startswith('.. link:'):
             line = '.. link: %s%s\n' % (purl, htmlpath)
+        elif line.startswith('.. tags: '):
+            line = '.. tags: %s' % ', '.join(tags)
         elif line == 'Write your post here.':
             line = u'\n' + text
         elif line == '\n':
